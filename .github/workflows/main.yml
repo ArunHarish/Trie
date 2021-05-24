@@ -1,0 +1,26 @@
+name: Trie tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Trie unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Node.js Environment setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          
+      - name: Checkout in current directory
+        uses: actions/checkout@v2
+        
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run test command
+        run: npm run test
+        
