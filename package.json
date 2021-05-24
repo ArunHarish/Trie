@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/index.js",
     "compile-watch": "tsc --watch",
-    "test": "jest"
+    "test": "jest",
+    "coverage" : "jest --collectCoverage"
   },
   "keywords": [
     "Trie",
